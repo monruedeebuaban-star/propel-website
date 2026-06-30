@@ -92,12 +92,11 @@
   /* ---------- programs ---------- */
   .prog-head{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start;margin-bottom:46px}
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-  .card .thumb{height:210px;border-radius:3px;background:#d9d6e2;position:relative;overflow:hidden}
-  .card:nth-child(1) .thumb{background:linear-gradient(135deg,#5a4f80,#463a6b)}
-  .card:nth-child(2) .thumb{background:linear-gradient(135deg,#cdb985,#c3a35c)}
-  .card:nth-child(3) .thumb{background:linear-gradient(135deg,#6b6286,#322a4d)}
-  .card .thumb span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-    color:#ffffff66;font-size:12px;letter-spacing:.1em}
+  .card .thumb{height:210px;border-radius:3px;background:#d9d6e2;position:relative;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.92)}
+  .card:nth-child(1) .thumb{background:#463a6b url("assets/prog-harrison.jpg") center/cover no-repeat}
+  .card:nth-child(2) .thumb{background:#322a4d url("assets/prog-energy.jpg") center/cover no-repeat}
+  .card:nth-child(3) .thumb{background:#322a4d url("assets/prog-leadership.jpg") center/cover no-repeat}
   .card h3{font-size:19px;font-weight:500;margin:20px 0 6px}
   .card .meta{color:var(--ink-soft);font-size:14px}
   .card .price{color:var(--gold);font-size:14px;font-weight:600;margin:2px 0 18px}
@@ -224,21 +223,21 @@
   </div>
   <div class="cards">
     <div class="card">
-      <div class="thumb"><span>[ image ]</span></div>
+      <div class="thumb"></div>
       <h3 data-i18n="p1_title">Program One</h3>
       <div class="meta" data-i18n="p1_meta">Duration / format</div>
       <div class="price" data-i18n="p1_price">Free</div>
       <a class="btn" href="#contact" data-i18n="card_cta">View Details</a>
     </div>
     <div class="card">
-      <div class="thumb"><span>[ image ]</span></div>
+      <div class="thumb"></div>
       <h3 data-i18n="p2_title">Program Two</h3>
       <div class="meta" data-i18n="p2_meta">Duration / format</div>
       <div class="price" data-i18n="p2_price">Free</div>
       <a class="btn" href="#contact" data-i18n="card_cta2">View Details</a>
     </div>
     <div class="card">
-      <div class="thumb"><span>[ image ]</span></div>
+      <div class="thumb"></div>
       <h3 data-i18n="p3_title">Program Three</h3>
       <div class="meta" data-i18n="p3_meta">Duration / format</div>
       <div class="price" data-i18n="p3_price">Free</div>
@@ -354,12 +353,12 @@ const COPY = {
     hero_sub:"Design and co-develop tailored learning journeys that ensure your people don't just learn, but change how they perform.",
     hero_cta:"Schedule Consultation", hero_img:"[ hero image — replace ]",
 
-    prog_title:"Career Development Programs",
-    prog_lead:"[Short intro to your training and coaching programs.]",
-    p1_title:"[Program One]", p1_meta:"[Duration / format]", p1_price:"[Price]",
-    p2_title:"[Program Two]", p2_meta:"[Duration / format]", p2_price:"[Price]",
-    p3_title:"[Program Three]", p3_meta:"[Duration / format]", p3_price:"[Price]",
-    card_cta:"View Details", card_cta2:"View Details", card_cta3:"View Details",
+    prog_title:"Our Programs",
+    prog_lead:"Practical, behavior-changing programs that turn learning into real performance.",
+    p1_title:"Harrison Assessments", p1_meta:"Duration: 2 hours", p1_price:"Contact for Pricing",
+    p2_title:"Human Energy Management", p2_meta:"Duration: 6 hours", p2_price:"Contact for Pricing",
+    p3_title:"H.E.A.R.T Excellence Leadership", p3_meta:"Duration: 2 days", p3_price:"Contact for Pricing",
+    card_cta:"Contact Us", card_cta2:"Contact Us", card_cta3:"Contact Us",
 
     about_title:"Who We Are",
     about_lead:"A Learning Design & Behavioral Change Partner.",
@@ -396,12 +395,12 @@ const COPY = {
     hero_sub:"ออกแบบและร่วมพัฒนาเส้นทางการเรียนรู้ที่เหมาะกับองค์กรของคุณ เพื่อให้คนของคุณไม่ใช่แค่ได้เรียนรู้ แต่เปลี่ยนวิธีการทำงานให้เกิดผลลัพธ์จริง",
     hero_cta:"นัดพูดคุยกับเรา", hero_img:"[ ภาพหน้าปก — แทนที่ ]",
 
-    prog_title:"โปรแกรมพัฒนาอาชีพ",
-    prog_lead:"[คำอธิบายสั้น ๆ เกี่ยวกับโปรแกรมฝึกอบรมและโค้ชชิ่งของคุณ]",
-    p1_title:"[โปรแกรมที่ 1]", p1_meta:"[ระยะเวลา / รูปแบบ]", p1_price:"[ราคา]",
-    p2_title:"[โปรแกรมที่ 2]", p2_meta:"[ระยะเวลา / รูปแบบ]", p2_price:"[ราคา]",
-    p3_title:"[โปรแกรมที่ 3]", p3_meta:"[ระยะเวลา / รูปแบบ]", p3_price:"[ราคา]",
-    card_cta:"ดูรายละเอียด", card_cta2:"ดูรายละเอียด", card_cta3:"ดูรายละเอียด",
+    prog_title:"โปรแกรมของเรา",
+    prog_lead:"โปรแกรมที่เน้นการลงมือทำและเปลี่ยนพฤติกรรม เพื่อเปลี่ยนการเรียนรู้ให้เป็นผลลัพธ์จริง",
+    p1_title:"Harrison Assessments", p1_meta:"ระยะเวลา: 2 ชั่วโมง", p1_price:"ติดต่อสอบถามราคา",
+    p2_title:"Human Energy Management", p2_meta:"ระยะเวลา: 6 ชั่วโมง", p2_price:"ติดต่อสอบถามราคา",
+    p3_title:"H.E.A.R.T Excellence Leadership", p3_meta:"ระยะเวลา: 2 วัน", p3_price:"ติดต่อสอบถามราคา",
+    card_cta:"ติดต่อเรา", card_cta2:"ติดต่อเรา", card_cta3:"ติดต่อเรา",
 
     about_title:"ทำความรู้จักกับเรา",
     about_lead:"พาร์ทเนอร์ด้านการออกแบบการเรียนรู้และการเปลี่ยนแปลงพฤติกรรม",
