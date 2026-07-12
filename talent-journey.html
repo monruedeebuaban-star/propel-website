@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Propel Career Solutions</title>
+<title>Talent Journey — Propel Career Solutions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Prompt:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -177,6 +177,14 @@
     .about-img{height:320px}
     .hero-side{order:2}
   }
+  /* Talent Journey page */
+  .tj-pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);margin-bottom:20px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:42px}
+  .step{border:1px solid var(--line);border-radius:14px;padding:26px 24px}
+  .step .num{width:38px;height:38px;border-radius:50%;background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;margin-bottom:16px}
+  .step h3{font-size:18px;font-weight:600;color:var(--ink);margin-bottom:8px}
+  .step p{color:var(--ink-soft);font-size:14px;line-height:1.55}
+  @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -184,12 +192,12 @@
 <!-- ===================== NAV ===================== -->
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="logo" href="#top">
+    <a class="logo" href="index.html">
       <img src="assets/propel-logo-sail.png" alt="Propel Career Solutions" />
     </a>
     <nav class="links">
-      <a href="#about" data-i18n="nav_about">About</a>
-      <a href="#programs" data-i18n="nav_programs">Programs</a>
+      <a href="index.html#about" data-i18n="nav_about">About</a>
+      <a href="index.html#programs" data-i18n="nav_programs">Programs</a>
       <a href="talent-journey.html" data-i18n="nav_journey">Talent Journey</a>
       <a href="#contact" data-i18n="nav_contact">Contact</a>
       <div class="lang">
@@ -202,103 +210,29 @@
 
 <a id="top"></a>
 
-<!-- ===================== HERO ===================== -->
+<!-- ===================== TALENT JOURNEY HERO ===================== -->
 <section class="hero wrap">
   <div class="hero-top">
     <div class="hero-lead">
-      <h1><span data-i18n="hero_line1">Navigate.</span> <span data-i18n="hero_line2">Grow.</span><br /><span class="gold" data-i18n="hero_line3">Arrive.</span></h1>
-      <p class="hero-tag" data-i18n="hero_tag">By turning insight into real behavioral change that drives performance.</p>
+      <span class="tj-pill" data-i18n="tj_pill">Post-training growth platform</span>
+      <h1><span data-i18n="tj_h1a">Turn training into</span><br /><span class="gold" data-i18n="tj_h1b">real-world growth.</span></h1>
+      <p class="hero-tag" data-i18n="tj_sub">Reflect on how you applied what you learned, and grow through coaching feedback.</p>
     </div>
     <div class="hero-side">
-      <p data-i18n="hero_sub">A welcoming line that tells visitors what Propel does and why it matters to their career journey.</p>
-      <a class="btn" href="#contact" data-i18n="hero_cta">Explore Programs</a>
-    </div>
-  </div>
-  <div class="hero-img"><div class="ph" data-i18n="hero_img">[ hero image — replace ]</div></div>
-</section>
-
-<!-- ===================== PROGRAMS ===================== -->
-<section class="sec wrap" id="programs">
-  <div class="prog-head">
-    <h2 data-i18n="prog_title">Career Development Programs</h2>
-    <p class="lead" data-i18n="prog_lead">A short paragraph introducing your training and coaching programs.</p>
-  </div>
-  <div class="cards">
-    <div class="card">
-      <div class="thumb"></div>
-      <h3 data-i18n="p1_title">Program One</h3>
-      <div class="meta" data-i18n="p1_meta">Duration / format</div>
-      <div class="price" data-i18n="p1_price">Free</div>
-      <a class="btn" href="#contact" data-i18n="card_cta">View Details</a>
-    </div>
-    <div class="card">
-      <div class="thumb"></div>
-      <h3 data-i18n="p2_title">Program Two</h3>
-      <div class="meta" data-i18n="p2_meta">Duration / format</div>
-      <div class="price" data-i18n="p2_price">Free</div>
-      <a class="btn" href="#contact" data-i18n="card_cta2">View Details</a>
-    </div>
-    <div class="card">
-      <div class="thumb"></div>
-      <h3 data-i18n="p3_title">Program Three</h3>
-      <div class="meta" data-i18n="p3_meta">Duration / format</div>
-      <div class="price" data-i18n="p3_price">Free</div>
-      <a class="btn" href="#contact" data-i18n="card_cta3">View Details</a>
+      <a class="btn" href="https://propeltalent.net" target="_blank" rel="noopener" data-i18n="tj_cta">Enter Propel Talent</a>
     </div>
   </div>
 </section>
 
-<!-- ===================== ABOUT ===================== -->
-<section class="sec wrap" id="about">
-  <div class="about">
-    <div class="about-text">
-      <h2 data-i18n="about_title">About</h2>
-      <p class="about-lead" data-i18n="about_lead">A Learning Design &amp; Behavioral Change Partner.</p>
-      <p data-i18n="about_body">A space to share Propel's story.</p>
-      <a class="btn btn-gold" href="#clients" data-i18n="about_cta">Read More</a>
-    </div>
-    <div class="about-img"><div class="ph" data-i18n="about_img">[ portrait / team photo ]</div></div>
-  </div>
-</section>
-
-<!-- ===================== CLIENTS ===================== -->
-<section class="clients" id="clients">
-  <div class="wrap">
-    <h2 data-i18n="clients_title">Trusted By</h2>
-    <div class="logos">
-      <div class="box"><span data-i18n="cl1">Client 1</span></div>
-      <div class="box"><span data-i18n="cl2">Client 2</span></div>
-      <div class="box"><span data-i18n="cl3">Client 3</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== INSIGHTS (dark) — hidden until blog content is ready ===================== -->
-<section class="dark sec" id="insights" style="display:none">
-  <div class="wrap">
-    <h2 data-i18n="posts_title">Latest Insights</h2>
-    <div class="posts">
-      <div class="post"><div class="pdate" data-i18n="b1_date">Date</div><div class="pt" data-i18n="b1_title">Article title one</div></div>
-      <div class="post"><div class="pdate" data-i18n="b2_date">Date</div><div class="pt" data-i18n="b2_title">Article title two</div></div>
-      <div class="post"><div class="pdate" data-i18n="b3_date">Date</div><div class="pt" data-i18n="b3_title">Article title three</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== TESTIMONIALS (dark) ===================== -->
-<section class="dark sec">
-  <div class="wrap">
-    <h2 data-i18n="test_title">Testimonials</h2>
-    <div class="quotes">
-      <div class="quote">
-        <p data-i18n="t1_text">A short quote from a client about working with Propel and the results they saw.</p>
-        <div class="who"><span class="role" data-i18n="t1_who">Program Participant</span><span class="cin" data-i18n="t_in">in</span><span class="course" data-i18n="t1_course">Human Energy Management</span></div>
-      </div>
-      <div class="quote">
-        <p data-i18n="t2_text">A short quote from a client about working with Propel and the results they saw.</p>
-        <div class="who"><span class="role" data-i18n="t2_who">Program Participant</span><span class="cin" data-i18n="t_in">in</span><span class="course" data-i18n="t2_course">H.E.A.R.T Excellence Leadership</span></div>
-      </div>
-    </div>
+<!-- ===================== THE JOURNEY (steps) ===================== -->
+<section class="sec wrap" id="journey-steps">
+  <h2 data-i18n="tj_steps_title">The Talent Journey</h2>
+  <p class="lead" data-i18n="tj_steps_lead">Your journey, step by step.</p>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><h3 data-i18n="tj_s1_t">[Stage 1]</h3><p data-i18n="tj_s1_d">[Short description]</p></div>
+    <div class="step"><div class="num">2</div><h3 data-i18n="tj_s2_t">[Stage 2]</h3><p data-i18n="tj_s2_d">[Short description]</p></div>
+    <div class="step"><div class="num">3</div><h3 data-i18n="tj_s3_t">[Stage 3]</h3><p data-i18n="tj_s3_d">[Short description]</p></div>
+    <div class="step"><div class="num">4</div><h3 data-i18n="tj_s4_t">[Stage 4]</h3><p data-i18n="tj_s4_d">[Short description]</p></div>
   </div>
 </section>
 
@@ -348,6 +282,15 @@
    =================================================================== */
 const COPY = {
   en: {
+    tj_pill:"Post-training growth platform",
+    tj_h1a:"Turn training into", tj_h1b:"real-world growth.",
+    tj_sub:"Reflect on how you applied what you learned, and grow through coaching feedback.",
+    tj_cta:"Enter Propel Talent",
+    tj_steps_title:"The Talent Journey", tj_steps_lead:"Your journey, step by step.",
+    tj_s1_t:"[Stage 1]", tj_s1_d:"[Short description — send me the steps and I'll fill these in.]",
+    tj_s2_t:"[Stage 2]", tj_s2_d:"[Short description]",
+    tj_s3_t:"[Stage 3]", tj_s3_d:"[Short description]",
+    tj_s4_t:"[Stage 4]", tj_s4_d:"[Short description]",
     nav_about:"About", nav_programs:"Programs", nav_journey:"Talent Journey", nav_insights:"Insights", nav_contact:"Contact",
     journey_title:"Talent Journey", journey_lead:"Coming soon — the Propel talent development journey.",
 
@@ -391,6 +334,15 @@ const COPY = {
     l_copy:"© 2024 Propel Career Solutions Co., Ltd."
   },
   th: {
+    tj_pill:"แพลตฟอร์มพัฒนาต่อยอดหลังการอบรม",
+    tj_h1a:"เปลี่ยนการอบรมให้เป็น", tj_h1b:"การเติบโตในงานจริง",
+    tj_sub:"สะท้อนผลว่าคุณนำสิ่งที่เรียนรู้ไปใช้อย่างไร และเติบโตผ่านฟีดแบ็กเชิงโค้ช",
+    tj_cta:"เข้าสู่ Propel Talent",
+    tj_steps_title:"เส้นทางพัฒนาศักยภาพ", tj_steps_lead:"เส้นทางของคุณ ทีละขั้น",
+    tj_s1_t:"[ขั้นที่ 1]", tj_s1_d:"[คำอธิบายสั้น ๆ — ส่งขั้นตอนมาแล้วผมจะเติมให้]",
+    tj_s2_t:"[ขั้นที่ 2]", tj_s2_d:"[คำอธิบายสั้น ๆ]",
+    tj_s3_t:"[ขั้นที่ 3]", tj_s3_d:"[คำอธิบายสั้น ๆ]",
+    tj_s4_t:"[ขั้นที่ 4]", tj_s4_d:"[คำอธิบายสั้น ๆ]",
     nav_about:"เกี่ยวกับเรา", nav_programs:"โปรแกรม", nav_journey:"เส้นทางพัฒนาศักยภาพ", nav_insights:"บทความ", nav_contact:"ติดต่อ",
     journey_title:"เส้นทางพัฒนาศักยภาพ", journey_lead:"เร็ว ๆ นี้ — เส้นทางการพัฒนาศักยภาพคนของ Propel",
 
