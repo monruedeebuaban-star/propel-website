@@ -121,6 +121,18 @@
   .about-img .ph{display:none}
   .about-text p{color:var(--ink-soft);font-size:16px;margin:24px 0 30px;max-width:440px}
   .about-text .about-lead{color:var(--purple);font-weight:600;font-size:18px;margin:20px 0 0;max-width:440px}
+  /* methodology */
+  .method{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:46px}
+  .mstep{border:1px solid var(--line);border-radius:16px;padding:30px 16px 24px;text-align:center;position:relative}
+  .mnum{width:40px;height:40px;border-radius:50%;background:var(--purple);color:#fff;font-weight:700;font-size:16px;
+    display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+  .micon{width:86px;height:86px;border-radius:50%;background:#efecf6;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+  .micon svg{width:44px;height:44px;color:var(--purple)}
+  .mstep h3{font-size:17px;font-weight:700;letter-spacing:.05em;color:var(--purple);text-transform:uppercase;margin-bottom:8px}
+  .mstep p{font-size:13.5px;color:var(--ink-soft);line-height:1.5}
+  .mstep::after{content:"";display:block;width:26px;height:2px;background:var(--gold);border-radius:2px;margin:16px auto 0}
+  @media(max-width:860px){.method{grid-template-columns:1fr 1fr;gap:14px}}
+  @media(max-width:480px){.method{grid-template-columns:1fr}}
 
   /* ---------- clients ---------- */
   .clients{background:var(--bg-gray);padding:78px 0}
@@ -281,6 +293,44 @@
   </div>
 </section>
 
+<!-- ===================== METHODOLOGY ===================== -->
+<section class="sec wrap" id="methodology">
+  <h2 data-i18n="method_title">Our Methodology</h2>
+  <p class="lead" data-i18n="method_lead">How we turn training into lasting performance.</p>
+  <div class="method">
+    <div class="mstep">
+      <div class="mnum">1</div>
+      <div class="micon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="8" width="22" height="34" rx="3"/><rect x="17" y="5" width="10" height="6" rx="2"/><circle cx="18" cy="20" r="3"/><path d="M13 30c0-3 2.2-5 5-5s5 2 5 5"/><path d="M28 18l2.5 2.5L36 15"/><path d="M28 28l2.5 2.5L36 25"/></svg></div>
+      <h3 data-i18n="m1_t">Assess</h3>
+      <p data-i18n="m1_d">Understand people before development.</p>
+    </div>
+    <div class="mstep">
+      <div class="mnum">2</div>
+      <div class="micon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="9" width="24" height="17" rx="2"/><line x1="12" y1="15" x2="26" y2="15"/><line x1="12" y1="20" x2="21" y2="20"/><line x1="19" y1="26" x2="19" y2="31"/><line x1="12" y1="33" x2="26" y2="33"/><circle cx="38" cy="19" r="3.2"/><path d="M32 33c0-4 2.7-7 6-7s6 3 6 7"/></svg></div>
+      <h3 data-i18n="m2_t">Train</h3>
+      <p data-i18n="m2_d">Build knowledge, skills, and mindset.</p>
+    </div>
+    <div class="mstep">
+      <div class="mnum">3</div>
+      <div class="micon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="21" cy="27" r="14"/><circle cx="21" cy="27" r="8"/><circle cx="21" cy="27" r="2.6" fill="currentColor" stroke="none"/><line x1="24" y1="24" x2="41" y2="7"/><path d="M35 7h6v6"/></svg></div>
+      <h3 data-i18n="m3_t">Apply</h3>
+      <p data-i18n="m3_d">Turn learning into workplace action.</p>
+    </div>
+    <div class="mstep">
+      <div class="mnum">4</div>
+      <div class="micon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="15" y="6" width="18" height="12" rx="3"/><circle cx="21" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="24" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="27" cy="12" r="1" fill="currentColor" stroke="none"/><path d="M22 18l-2 4 5-4"/><circle cx="24" cy="28" r="4.2"/><circle cx="13" cy="31" r="3.6"/><circle cx="35" cy="31" r="3.6"/><path d="M17 42c0-4 3-7 7-7s7 3 7 7"/><path d="M7 42c0-3 2-5 4.5-5.5"/><path d="M41 42c0-3-2-5-4.5-5.5"/></svg></div>
+      <h3 data-i18n="m4_t">Reinforce</h3>
+      <p data-i18n="m4_d">Strengthen new behaviors through structured follow-up.</p>
+    </div>
+    <div class="mstep">
+      <div class="mnum">5</div>
+      <div class="micon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="40" x2="41" y2="40"/><rect x="13" y="30" width="5" height="10"/><rect x="22" y="24" width="5" height="16"/><rect x="31" y="17" width="5" height="23"/><path d="M11 28l8-6 8 3 14-13"/><path d="M35 12h6v6"/></svg></div>
+      <h3 data-i18n="m5_t">Measure</h3>
+      <p data-i18n="m5_d">Evaluate behavioral change and business impact.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== CLIENTS ===================== -->
 <section class="clients" id="clients">
   <div class="wrap">
@@ -387,6 +437,12 @@ const COPY = {
     about_lead:"A Learning Design & Behavioral Change Partner.",
     about_body:"At Propel Career Solutions, we believe success doesn't come from learning alone. It comes from changing how people think, act, and perform in real work situations. We partner with organizations to design and deliver tailored learning journeys, integrating assessments, learning design, and behavioral change for real, measurable impact. We're not a traditional training provider; we're a learning design partner that turns business objectives into performance outcomes.",
     about_cta:"Trusted By", about_img:"[ portrait / team photo ]",
+    method_title:"Our Methodology", method_lead:"How we turn training into lasting performance.",
+    m1_t:"Assess", m1_d:"Understand people before development.",
+    m2_t:"Train", m2_d:"Build knowledge, skills, and mindset.",
+    m3_t:"Apply", m3_d:"Turn learning into workplace action.",
+    m4_t:"Reinforce", m4_d:"Strengthen new behaviors through structured follow-up.",
+    m5_t:"Measure", m5_d:"Evaluate behavioral change and business impact.",
 
     clients_title:"Trusted By",
     cl1:"Volvo", cl2:"CBRE", cl3:"SC Asset",
@@ -430,6 +486,12 @@ const COPY = {
     about_lead:"พาร์ทเนอร์ด้านการออกแบบการเรียนรู้และการเปลี่ยนแปลงพฤติกรรม",
     about_body:"ที่ Propel Career Solutions เราเชื่อว่าความสำเร็จไม่ได้เกิดจากการเรียนรู้เพียงอย่างเดียว แต่เกิดจากการเปลี่ยนแปลงวิธีคิด วิธีลงมือทำ และวิธีสร้างผลงานจริงในบริบทการทำงาน เราทำงานร่วมกับองค์กรในการออกแบบและส่งมอบเส้นทางการเรียนรู้ที่เหมาะสมกับแต่ละองค์กร โดยผสานการประเมิน การออกแบบการเรียนรู้ และการเปลี่ยนแปลงพฤติกรรม เพื่อสร้างผลลัพธ์ที่ชัดเจนและวัดผลได้ เราไม่ใช่ผู้ให้บริการฝึกอบรมแบบเดิม แต่เป็นพาร์ทเนอร์ด้านการออกแบบการเรียนรู้ที่ช่วยเปลี่ยนเป้าหมายทางธุรกิจให้กลายเป็นผลลัพธ์ด้านศักยภาพและการปฏิบัติงาน",
     about_cta:"องค์กรที่ไว้วางใจเรา", about_img:"[ ภาพทีม / บุคคล ]",
+    method_title:"แนวทางของเรา", method_lead:"เราเปลี่ยนการอบรมให้เป็นผลลัพธ์ที่ยั่งยืนอย่างไร",
+    m1_t:"ประเมิน", m1_d:"เข้าใจคนก่อนเริ่มพัฒนา",
+    m2_t:"อบรม", m2_d:"สร้างความรู้ ทักษะ และทัศนคติ",
+    m3_t:"นำไปใช้", m3_d:"เปลี่ยนการเรียนรู้เป็นการลงมือทำในงานจริง",
+    m4_t:"เสริมย้ำ", m4_d:"เสริมพฤติกรรมใหม่ผ่านการติดตามอย่างเป็นระบบ",
+    m5_t:"วัดผล", m5_d:"ประเมินการเปลี่ยนแปลงพฤติกรรมและผลลัพธ์ทางธุรกิจ",
 
     clients_title:"ลูกค้าที่ไว้วางใจเรา",
     cl1:"Volvo", cl2:"CBRE", cl3:"SC Asset",
