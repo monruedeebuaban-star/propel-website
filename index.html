@@ -132,9 +132,9 @@
   .mstep p{font-size:13.5px;color:var(--ink-soft);line-height:1.5}
   .mstep::after{content:"";display:block;width:26px;height:2px;background:var(--gold);border-radius:2px;margin:16px auto 0}
   .micon{position:relative}
-  .mstep.certified{padding-bottom:76px}
-  .cert-seal{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);width:48px;height:48px;
-    filter:drop-shadow(0 2px 5px rgba(70,58,107,.3))}
+  .method-cert{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:38px}
+  .method-cert img{width:46px;height:46px;filter:drop-shadow(0 2px 5px rgba(70,58,107,.25))}
+  .method-cert span{font-size:14px;font-weight:600;color:var(--purple);letter-spacing:.02em}
   @media(max-width:860px){.method{grid-template-columns:1fr 1fr;gap:14px}}
   @media(max-width:480px){.method{grid-template-columns:1fr}}
 
@@ -307,7 +307,6 @@
       <div class="micon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="8" width="22" height="34" rx="3"/><rect x="17" y="5" width="10" height="6" rx="2"/><circle cx="18" cy="20" r="3"/><path d="M13 30c0-3 2.2-5 5-5s5 2 5 5"/><path d="M28 18l2.5 2.5L36 15"/><path d="M28 28l2.5 2.5L36 25"/></svg></div>
       <h3 data-i18n="m1_t">Assess</h3>
       <p data-i18n="m1_d">Understand people before development.</p>
-      <img class="cert-seal" src="assets/harrison-certified.png" alt="Harrison Assessments Certified" title="Harrison Assessments Certified — Employee Development" />
     </div>
     <div class="mstep">
       <div class="mnum">2</div>
@@ -334,6 +333,7 @@
       <p data-i18n="m5_d">Evaluate behavioral change and business impact.</p>
     </div>
   </div>
+  <div class="method-cert"><img src="assets/harrison-certified.png" alt="Harrison Assessments Certified — Employee Development" /><span data-i18n="method_cert">Certified by Harrison Assessments</span></div>
 </section>
 
 <!-- ===================== CLIENTS ===================== -->
@@ -448,6 +448,7 @@ const COPY = {
     m3_t:"Apply", m3_d:"Turn learning into workplace action.",
     m4_t:"Reinforce", m4_d:"Strengthen new behaviors through structured follow-up.",
     m5_t:"Measure", m5_d:"Evaluate behavioral change and business impact.",
+    method_cert:"Assessments certified by Harrison Assessments",
 
     clients_title:"Trusted By",
     cl1:"Volvo", cl2:"CBRE", cl3:"SC Asset",
@@ -497,6 +498,7 @@ const COPY = {
     m3_t:"นำไปใช้", m3_d:"เปลี่ยนการเรียนรู้เป็นการลงมือทำในงานจริง",
     m4_t:"เสริมย้ำ", m4_d:"เสริมพฤติกรรมใหม่ผ่านการติดตามอย่างเป็นระบบ",
     m5_t:"วัดผล", m5_d:"ประเมินการเปลี่ยนแปลงพฤติกรรมและผลลัพธ์ทางธุรกิจ",
+    method_cert:"การประเมินได้รับการรับรองโดย Harrison Assessments",
 
     clients_title:"ลูกค้าที่ไว้วางใจเรา",
     cl1:"Volvo", cl2:"CBRE", cl3:"SC Asset",
