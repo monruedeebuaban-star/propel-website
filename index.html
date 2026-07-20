@@ -132,7 +132,7 @@
   .mstep p{font-size:13.5px;color:var(--ink-soft);line-height:1.5}
   .mstep::after{content:"";display:block;width:26px;height:2px;background:var(--gold);border-radius:2px;margin:16px auto 0}
   .micon{position:relative}
-  .method-cert{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:38px}
+  .method-cert{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:38px}
   .method-cert img{width:46px;height:46px;filter:drop-shadow(0 2px 5px rgba(70,58,107,.25))}
   .method-cert span{font-size:14px;font-weight:600;color:var(--purple);letter-spacing:.02em}
   @media(max-width:860px){.method{grid-template-columns:1fr 1fr;gap:14px}}
@@ -333,7 +333,7 @@
       <p data-i18n="m5_d">Evaluate behavioral change and business impact.</p>
     </div>
   </div>
-  <div class="method-cert"><img src="assets/harrison-certified.png" alt="Harrison Assessments Certified — Employee Development" /><span data-i18n="method_cert">Certified by Harrison Assessments</span></div>
+  <div class="method-cert"><span data-i18n="method_cert">Certified by Harrison Assessments</span><img src="assets/harrison-certified.png" alt="Harrison Assessments Certified — Employee Development" /></div>
 </section>
 
 <!-- ===================== CLIENTS ===================== -->
