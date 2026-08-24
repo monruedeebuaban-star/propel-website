@@ -63,11 +63,12 @@
   .logo{display:flex;align-items:center}
   .logo img{height:50px;width:auto;display:block}
   nav.links{display:flex;align-items:center;gap:26px}
-  nav.links a{font-size:15px;color:var(--ink);font-weight:400;transition:color .15s}
+  nav.links a{font-size:15px;color:var(--ink);font-weight:400;transition:color .15s;white-space:nowrap}
   nav.links a:hover{color:var(--purple)}
   nav.links a.nav-book{padding:9px 18px;font-size:13px;font-weight:500;color:var(--purple)}
   nav.links a.nav-book:hover{color:#fff}
-  @media(max-width:1040px){
+  .mobile-menu a.book{color:var(--purple);font-weight:600}
+  @media(max-width:1120px){
     nav.links a:not(.nav-book){display:none}
     .hamburger{display:flex}
   }
@@ -262,7 +263,6 @@
       <a href="performance-mentoring.html" data-i18n="nav_mentoring">Performance Mentoring</a>
       <a href="insights.html" data-i18n="nav_insights">Insights</a>
       <a href="about.html" data-i18n="nav_about">About</a>
-      <a href="contact.html" data-i18n="nav_contact">Contact</a>
       <a href="contact.html" class="btn nav-book" data-i18n="nav_book">Book a Capability Discussion</a>
       <div class="lang">
         <button data-lang="en" class="active">EN</button>
@@ -277,7 +277,7 @@
     <a href="performance-mentoring.html" data-i18n="nav_mentoring" onclick="closeMenu()">Performance Mentoring</a>
     <a href="insights.html" data-i18n="nav_insights" onclick="closeMenu()">Insights</a>
     <a href="about.html" data-i18n="nav_about" onclick="closeMenu()">About</a>
-    <a href="contact.html" data-i18n="nav_contact" onclick="closeMenu()">Contact</a>
+    <a href="contact.html" class="book" data-i18n="nav_book" onclick="closeMenu()">Book a Capability Discussion</a>
   </div>
 </header>
 
