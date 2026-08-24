@@ -62,9 +62,15 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:86px;padding-left:0;padding-right:0}
   .logo{display:flex;align-items:center}
   .logo img{height:50px;width:auto;display:block}
-  nav.links{display:flex;align-items:center;gap:38px}
+  nav.links{display:flex;align-items:center;gap:26px}
   nav.links a{font-size:15px;color:var(--ink);font-weight:400;transition:color .15s}
   nav.links a:hover{color:var(--purple)}
+  nav.links a.nav-book{padding:9px 18px;font-size:13px;font-weight:500;color:var(--purple)}
+  nav.links a.nav-book:hover{color:#fff}
+  @media(max-width:1040px){
+    nav.links a:not(.nav-book){display:none}
+    .hamburger{display:flex}
+  }
   .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:12px}
   .lang button{border:none;background:none;padding:7px 13px;cursor:pointer;font-family:inherit;
     font-weight:600;color:var(--ink-soft);letter-spacing:.05em}
@@ -194,8 +200,8 @@
 
   /* ---------- responsive ---------- */
   @media(max-width:860px){
-    nav.links{gap:18px}
-    nav.links a{display:none}
+    nav.links{gap:14px}
+    nav.links a:not(.nav-book){display:none}
     .nav-inner{padding-left:22px;padding-right:22px}
     .hamburger{display:flex}
     .hero.wrap,.sec.wrap,.foot.wrap{padding-left:22px;padding-right:22px}
@@ -207,6 +213,40 @@
     .hero-side{order:2}
   }
 </style>
+<!-- structured-data -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://propelcareer.net/#org",
+   "name": "Propel Career Solutions",
+   "url": "https://propelcareer.net/",
+   "logo": "https://propelcareer.net/assets/propel-logo-official.png",
+   "description": "A partner in capability development and performance mentoring in Thailand — turning training into workplace application and measurable progress.",
+   "email": "training@propelcareer.net",
+   "telephone": "+66926545996",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1687/1 Phahon19 Building, 2nd Floor, Unit 02, Phahonyothin Rd",
+    "addressLocality": "Chatuchak",
+    "addressRegion": "Bangkok",
+    "postalCode": "10900",
+    "addressCountry": "TH"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "name": "Propel Career Solutions",
+   "url": "https://propelcareer.net/",
+   "publisher": {
+    "@id": "https://propelcareer.net/#org"
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -214,13 +254,16 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="logo" href="#top">
-      <img src="assets/propel-logo-sail.png" alt="Propel Career Solutions" />
+      <img src="assets/propel-logo-official.png" alt="Propel Career Solutions" />
     </a>
     <nav class="links">
-      <a href="#about" data-i18n="nav_about">About</a>
-      <a href="#programs" data-i18n="nav_programs">Programs</a>
-      <a href="talent-journey.html" data-i18n="nav_journey">Talent Journey</a>
-      <a href="#contact" data-i18n="nav_contact">Contact</a>
+      <a href="solutions.html" data-i18n="nav_solutions">Solutions</a>
+      <a href="how-propel-works.html" data-i18n="nav_how">How Propel Works</a>
+      <a href="performance-mentoring.html" data-i18n="nav_mentoring">Performance Mentoring</a>
+      <a href="insights.html" data-i18n="nav_insights">Insights</a>
+      <a href="about.html" data-i18n="nav_about">About</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+      <a href="contact.html" class="btn nav-book" data-i18n="nav_book">Book a Capability Discussion</a>
       <div class="lang">
         <button data-lang="en" class="active">EN</button>
         <button data-lang="th">TH</button>
@@ -229,10 +272,12 @@
     </nav>
   </div>
   <div class="mobile-menu" id="mmenu">
-    <a href="#about" data-i18n="nav_about" onclick="closeMenu()">About</a>
-    <a href="#programs" data-i18n="nav_programs" onclick="closeMenu()">Programs</a>
-    <a href="talent-journey.html" data-i18n="nav_journey">Talent Journey</a>
-    <a href="#contact" data-i18n="nav_contact" onclick="closeMenu()">Contact</a>
+    <a href="solutions.html" data-i18n="nav_solutions" onclick="closeMenu()">Solutions</a>
+    <a href="how-propel-works.html" data-i18n="nav_how" onclick="closeMenu()">How Propel Works</a>
+    <a href="performance-mentoring.html" data-i18n="nav_mentoring" onclick="closeMenu()">Performance Mentoring</a>
+    <a href="insights.html" data-i18n="nav_insights" onclick="closeMenu()">Insights</a>
+    <a href="about.html" data-i18n="nav_about" onclick="closeMenu()">About</a>
+    <a href="contact.html" data-i18n="nav_contact" onclick="closeMenu()">Contact</a>
   </div>
 </header>
 
@@ -424,6 +469,7 @@
 const COPY = {
   en: {
     nav_about:"About", nav_programs:"Programs", nav_journey:"Talent Journey", nav_insights:"Insights", nav_contact:"Contact",
+    nav_solutions:"Solutions", nav_how:"How Propel Works", nav_mentoring:"Performance Mentoring", nav_book:"Book a Capability Discussion",
     journey_title:"Talent Journey", journey_lead:"Coming soon — the Propel talent development journey.",
 
     hero_line1:"We Help People", hero_line2:"", hero_line3:"Succeed.",
@@ -474,6 +520,7 @@ const COPY = {
   },
   th: {
     nav_about:"เกี่ยวกับเรา", nav_programs:"โปรแกรม", nav_journey:"เส้นทางพัฒนาศักยภาพ", nav_insights:"บทความ", nav_contact:"ติดต่อ",
+    nav_solutions:"โซลูชัน", nav_how:"แนวทางการทำงาน", nav_mentoring:"การโค้ชเพื่อผลงาน", nav_book:"นัดพูดคุยกับเรา",
     journey_title:"เส้นทางพัฒนาศักยภาพ", journey_lead:"เร็ว ๆ นี้ — เส้นทางการพัฒนาศักยภาพคนของ Propel",
 
     hero_line1:"เราช่วยให้ผู้คน", hero_line2:"", hero_line3:"ประสบความสำเร็จ",
