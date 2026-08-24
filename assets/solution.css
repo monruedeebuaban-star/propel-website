@@ -166,10 +166,10 @@ nav.links .cta:hover{background:var(--purple);color:#fff}
 .final .final-cta{display:flex;gap:14px;justify-content:center;margin-top:34px;flex-wrap:wrap}
 
 /* ---------- solutions overview (solutions.html) ---------- */
-.ov-hero{padding:52px 0 20px;text-align:center}
-.ov-hero .kicker{margin-bottom:16px}
-.ov-hero h1{font-weight:600;font-size:clamp(32px,4.6vw,52px);line-height:1.08;letter-spacing:-.02em;color:var(--purple);max-width:16ch;margin:0 auto}
-.ov-hero p{color:var(--ink-soft);font-size:18px;margin:22px auto 0;max-width:58ch}
+.ov-hero{padding:40px 0 20px}
+.ov-hero .kicker{margin-bottom:14px}
+.ov-hero h1{font-weight:600;font-size:clamp(32px,4.6vw,52px);line-height:1.08;letter-spacing:-.02em;color:var(--purple);max-width:20ch}
+.ov-hero p{color:var(--ink-soft);font-size:18px;margin:22px 0 0;max-width:60ch}
 .sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:44px 0 10px}
 .sol{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 28px;transition:transform .18s,box-shadow .18s}
 .sol:hover{transform:translateY(-4px);box-shadow:0 22px 50px -22px rgba(70,58,107,.4)}
