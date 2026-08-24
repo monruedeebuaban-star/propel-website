@@ -66,7 +66,7 @@ nav.links .cta:hover{background:var(--purple);color:#fff}
 .crumb .here{color:var(--purple)}
 
 /* ---------- hero ---------- */
-.hero{padding:40px 0 66px}
+.hero{padding-top:40px;padding-bottom:66px}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
 .kicker{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:20px}
 .hero h1{font-weight:600;font-size:clamp(32px,4.6vw,54px);line-height:1.08;letter-spacing:-.02em;color:var(--purple)}
@@ -166,7 +166,7 @@ nav.links .cta:hover{background:var(--purple);color:#fff}
 .final .final-cta{display:flex;gap:14px;justify-content:center;margin-top:34px;flex-wrap:wrap}
 
 /* ---------- solutions overview (solutions.html) ---------- */
-.ov-hero{padding:40px 0 20px}
+.ov-hero{padding-top:40px;padding-bottom:20px}
 .ov-hero .kicker{margin-bottom:14px}
 .ov-hero h1{font-weight:600;font-size:clamp(32px,4.6vw,52px);line-height:1.08;letter-spacing:-.02em;color:var(--purple);max-width:20ch}
 .ov-hero p{color:var(--ink-soft);font-size:18px;margin:22px 0 0;max-width:60ch}
