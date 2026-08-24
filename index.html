@@ -59,10 +59,10 @@
   /* ---------- nav ---------- */
   header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
     backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:86px;padding-left:0;padding-right:0}
-  .logo{display:flex;align-items:center}
-  .logo img{height:50px;width:auto;display:block}
-  nav.links{display:flex;align-items:center;gap:26px}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;height:86px;padding-left:0;padding-right:0}
+  .logo{display:flex;align-items:center;flex:none}
+  .logo img{height:46px;width:auto;display:block}
+  nav.links{display:flex;align-items:center;gap:20px}
   nav.links a{font-size:15px;color:var(--ink);font-weight:400;transition:color .15s;white-space:nowrap}
   nav.links a:hover{color:var(--purple)}
   nav.links a.nav-book{padding:9px 18px;font-size:13px;font-weight:500;color:var(--purple)}
@@ -72,10 +72,11 @@
     nav.links a:not(.nav-book){display:none}
     .hamburger{display:flex}
   }
-  .lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:12px}
-  .lang button{border:none;background:none;padding:7px 13px;cursor:pointer;font-family:inherit;
-    font-weight:600;color:var(--ink-soft);letter-spacing:.05em}
-  .lang button.active{background:var(--purple);color:#fff}
+  .lang-toggle{display:inline-flex;align-items:center;gap:6px;flex:none;border:1px solid var(--line);
+    border-radius:999px;padding:7px 12px;background:none;cursor:pointer;font-family:inherit;
+    font-size:12px;font-weight:600;color:var(--ink-soft);letter-spacing:.05em;transition:all .15s}
+  .lang-toggle:hover{border-color:var(--purple);color:var(--purple)}
+  .lang-toggle svg{width:15px;height:15px}
   .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;
     background:none;border:none;cursor:pointer;padding:8px;margin-left:2px}
   .hamburger span{width:24px;height:2px;background:var(--purple);border-radius:2px;transition:.25s}
@@ -264,10 +265,10 @@
       <a href="performance-mentoring.html" data-i18n="nav_mentoring">Performance Mentoring</a>
       <a href="insights.html" data-i18n="nav_insights">Insights</a>
       <a href="contact.html" class="btn nav-book" data-i18n="nav_book">Book a Capability Discussion</a>
-      <div class="lang">
-        <button data-lang="en" class="active">EN</button>
-        <button data-lang="th">TH</button>
-      </div>
+      <button class="lang-toggle" aria-label="Switch language" onclick="toggleLang()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+        <span id="langCode">EN</span>
+      </button>
       <button class="hamburger" aria-label="Menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     </nav>
   </div>
@@ -579,11 +580,12 @@ function setLang(lang){
     if(dict[k] !== undefined) el.textContent = dict[k];
   });
   document.documentElement.lang = lang;
-  document.querySelectorAll('.lang button').forEach(b=>
-    b.classList.toggle('active', b.dataset.lang===lang));
+  const lc = document.getElementById('langCode');
+  if(lc) lc.textContent = lang.toUpperCase();
 }
-document.querySelectorAll('.lang button').forEach(b=>
-  b.addEventListener('click', ()=>setLang(b.dataset.lang)));
+function toggleLang(){
+  setLang(document.documentElement.lang === 'th' ? 'en' : 'th');
+}
 setLang('en');
 </script>
 </body>
